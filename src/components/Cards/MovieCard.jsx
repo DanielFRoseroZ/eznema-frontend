@@ -1,1 +1,0 @@
-"https://placehold.co/400x200?font=Montserrat&text="

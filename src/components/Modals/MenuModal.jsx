@@ -6,13 +6,13 @@ export default function MenuModal({ handleClose, closeFromLink }) {
 
     return(
         <main className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center z-50">
-            <div>
-                <section className="bg-oxford-blue p-2 md:p-8 flex flex-col justify-center items-center relative rounded-t-xl">
+            <div className="z-50">
+                <section className="bg-oxford-blue z-50 p-2 md:p-8 flex flex-col justify-center items-center relative rounded-t-xl">
                     <div onClick={handleClose} className="absolute top-2 right-2 bg-cerise rounded-full p-1 m-2 hover:cursor-pointer flex items-center justify-center">
-                        <CloseIcon className="w-6 h-6 md:w-10 md:h-10 text-white cursor-pointer"/>
+                        <CloseIcon className="w-6 h-6 z-50 md:w-10 md:h-10 text-white cursor-pointer"/>
                     </div>
-                    <img src="images/logo.jpg" alt="Logo" className="w-32 md:w-48"/>
-                    <div className="flex flex-col items-center gap-2">
+                    <img src="images/logo.jpg" alt="Logo" className="w-32 md:w-48 z-50"/>
+                    <div className="flex flex-col items-center gap-2 z-50">
                         <h2 className="text-white text-xl md:text-3xl font-bold">Iniciar sesión</h2>
                         <p className="text-white text-base md:text-xl text-center">¡Bienvenido!, ingresa con tu correo y contraseña</p>
                     </div>
