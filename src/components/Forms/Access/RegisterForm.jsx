@@ -73,7 +73,11 @@ export default function RegisterForm() {
             password: data.password
         }
         try {
-            fetchData(formatedData)
+            registerService(formatedData)
+            .then((response) => {
+                console.log(response)
+                window.location.href = "/"
+            })
         } catch (error) {
             setError("Ocurrió un error al registrarte, el correo electrónico ya está en uso")
             console.log(error)
@@ -92,7 +96,7 @@ export default function RegisterForm() {
                         name="firstName"
                         placeholder="Nombre"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                 </label>
                 <label className="flex flex-col gap-1">
@@ -101,7 +105,7 @@ export default function RegisterForm() {
                         name="lastName"
                         placeholder="Apellido"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                 </label>
                 <label className="flex flex-col gap-1">
@@ -110,7 +114,7 @@ export default function RegisterForm() {
                         name="phone"
                         placeholder="Teléfono"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                 </label>
                 <label className="flex flex-col gap-1">
@@ -119,7 +123,7 @@ export default function RegisterForm() {
                         name="username"
                         placeholder="Correo electrónico"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                 </label>
                 <label className="flex gap-1 px-1 items-center">
@@ -128,7 +132,7 @@ export default function RegisterForm() {
                         name="password"
                         placeholder="Contraseña"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                     <ShowPasswordBtn visible={showPassword} setVisible={handleShowPassword}/>
                 </label>
@@ -138,13 +142,13 @@ export default function RegisterForm() {
                         name="confirmPassword"
                         placeholder="Confirmar contraseña"
                         onChange={handleChange}
-                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl focus:outline-none focus:border-ultramarine"
+                        className="w-full border-2 border-black border-opacity-20 p-2 rounded-xl 2xl:text-2xl focus:outline-none focus:border-ultramarine"
                     />
                     <ShowPasswordBtn visible={showConfirmPassword} setVisible={handleShowConfirmPassword}/>
                 </label>
                 <button
                     type="submit"
-                    className="bg-oxford-blue text-white p-3 rounded-xl text-base font-bold hover:bg-ultramarine"
+                    className="bg-oxford-blue text-white p-3 rounded-xl 2xl:text-2xl text-base font-bold hover:bg-ultramarine"
                 >
                     Registrarse
                 </button>

@@ -1,3 +1,10 @@
 export { default as loginService } from './login';
 export { default as registerService } from './register';
 export { default as fetchMoviesService } from './getMovies';
+export { default as postMovieService } from './createMovie';
+export { default as getCategoriesService } from './getCategories';
+export { default as postCategoriesService } from './createCategorie';
+export { default as getMovieByIdService } from './getMovieById';
+export { default as putMovieService } from './putMovie';
+export { default as deleteMovieByIdService } from './deleteMovieByID';
+export { default as logoutService } from './logout';

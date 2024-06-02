@@ -38,6 +38,9 @@ export default function LoginForm({ handleToggle }) {
         }
         try{
             loginService(data)
+            .then(() => {
+                window.location.reload()
+            })
         } catch (error) {
             setError("Usuario o contraseña incorrectos")
             console.log(error)
